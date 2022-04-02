@@ -12,11 +12,11 @@ async function fetchQuotes() {
 async function renderQuotes(data) {
     const getQuotes = await fetchQuotes()
     const quotes = getQuotes.data
-    const quoteNo = randomizer(quotes.length)
-    const html = ` <div class="quote__text" key="quote"></div> 
+    const num = randomizer(quotes.length)
+    const html = ` <div class="quote__text" key="${quotes[num].id}">${quotes[num].quoteText}</div> 
                     <div class="quote__details">
-                        <div class="author"></div>
-                        <div class="genre"></div>
+                        <div class="author"${quotes[num].quotesAuthor}></div>
+                        <div class="genre">${quotes[num].quotesGenre}</div>
                     </div>`
     let quoteWrapper = document.querySelector(".quote")
     quoteWrapper.innerHTML = html
