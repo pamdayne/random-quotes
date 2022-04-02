@@ -10,12 +10,19 @@ $font-fam: 'Courier New', Courier, monospace;
     align-items: $alignItems;
 }
 
+.body{
+    header {
+        @include flex(space-between, baseline);
+    }
+}
+
 main {
     background-color: $color-dark;
     height: 100vh;
     width: 100%;
-    @include flex(center, center);
 
+    @include flex(center, center);
+    
     .wrapper {
         background-color: $color-darker;
         height: 50%;
