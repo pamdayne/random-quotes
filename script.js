@@ -11,6 +11,8 @@ async function fetchQuotes() {
 
 async function renderQuotes(data) {
     const getQuotes = await fetchQuotes()
+    const quotes = getQuotes.data
+    const quoteNo = randomizer(quotes.length)
     const html = ` <div class="quote__text" key="quote"></div> 
                     <div class="quote__details">
                         <div class="author"></div>
@@ -18,4 +20,8 @@ async function renderQuotes(data) {
                     </div>`
     let quoteWrapper = document.querySelector(".quote")
     quoteWrapper.innerHTML = html
+}
+
+function randomizer(max) {
+    return Math.floor(Math.random() * max);
 }
