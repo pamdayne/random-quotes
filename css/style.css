@@ -2,6 +2,19 @@
   background-color: #555;
   height: 100vh;
   width: 100%;
+}
+
+main {
+  background-color: #555;
+  height: 100vh;
+  width: 100%;
+}
+
+main .wrapper {
+  background-color: #222;
+  height: 50%;
+  width: 50%;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,18 +26,13 @@
           align-items: center;
 }
 
-.body .wrapper {
-  background-color: #222;
-  height: 50%;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.quote {
+  color: #c0c0c0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.quote__text {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

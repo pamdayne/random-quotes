@@ -1,6 +1,8 @@
 $color-dark: #555;
 $color-darker: #222;
-$color-light: rgb(210, 210, 210);
+$color-light: #c0c0c0;
+$color-lighter: #dadada;
+$font-fam: 'Courier New', Courier, monospace;
 
 
 @mixin flex($justCont, $alignItems) {
@@ -13,14 +15,29 @@ $color-light: rgb(210, 210, 210);
     background-color: $color-dark;
     height: 100vh;
     width: 100%;
-    
-    @include flex(center, center);
+}
+
+main{
+    background-color: $color-dark;
+    height: 100vh;
+    width: 100%;
 
     .wrapper{
         background-color: $color-darker;
         height: 50%;
         width: 50%;
 
+        padding: 2rem;
+
         @include flex(center, center )
+    }
+}
+
+.quote{
+    color: $color-light;
+    font-family: $font-fam;
+    &__text{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
