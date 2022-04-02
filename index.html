@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        const url = 'https://quote-garden.herokuapp.com/api/v3/quotes';
+        const quote = fetch(url)
+            .then(resp => resp.json())
+            .then(data => console.log(data));
+    </script>
     <title>Quoters</title>
 </head>
+
 <body class="body">
-    <div class="wrapper"></div>
+    <div class="wrapper">
+        <div id="quoteid" class="quote">
+            <div class="quote__text"></div>
+            <div class="quote__details">
+                <div class="author"></div>
+                <div class="genre"></div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
