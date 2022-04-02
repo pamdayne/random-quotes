@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .body {
   background-color: #555;
 }
@@ -49,7 +54,7 @@ main .wrapper {
   font-family: "Courier New", Courier, monospace;
 }
 
-.quote__text {
+.quote_text {
   font-size: 1.5rem;
   margin-bottom: 2rem;
 }

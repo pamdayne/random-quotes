@@ -10,6 +10,11 @@ $font-fam: 'Courier New', Courier, monospace;
     align-items: $alignItems;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .body{
     background-color: $color-dark;
 
@@ -38,7 +43,7 @@ main {
 .quote {
     color: $color-light;
     font-family: $font-fam;
-    &__text {
+    &_text {
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }

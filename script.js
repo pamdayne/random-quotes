@@ -13,8 +13,8 @@ async function renderQuotes() {
     const getQuotes = await fetchQuotes()
     const quotes = getQuotes.data
     const num = randomizer(quotes.length)
-    const html = ` <div class="quote__text" key="${quotes[num].id}">${quotes[num].quoteText}</div> 
-                    <div class="quote__details">
+    const html = ` <div class="quote_text" key="${quotes[num].id}">${quotes[num].quoteText}</div> 
+                    <div class="quote_details">
                         <div class="author">${quotes[num].quoteAuthor}</div>
                         <div class="genre">${quotes[num].quoteGenre}</div>
                     </div>`
@@ -26,4 +26,6 @@ function randomizer(max) {
     return Math.floor(Math.random() * max);
 }
 
+
+// Load functions
 renderQuotes()
