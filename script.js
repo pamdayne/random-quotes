@@ -15,8 +15,8 @@ async function renderQuotes() {
     const num = randomizer(quotes.length)
     const html = ` <div class="quote__text" key="${quotes[num].id}">${quotes[num].quoteText}</div> 
                     <div class="quote__details">
-                        <div class="author"${quotes[num].quotesAuthor}></div>
-                        <div class="genre">${quotes[num].quotesGenre}</div>
+                        <div class="author">${quotes[num].quoteAuthor}</div>
+                        <div class="genre">${quotes[num].quoteGenre}</div>
                     </div>`
     let quoteWrapper = document.querySelector(".quote")
     quoteWrapper.innerHTML = html
