@@ -25,3 +25,5 @@ async function renderQuotes() {
 function randomizer(max) {
     return Math.floor(Math.random() * max);
 }
+
+renderQuotes()
