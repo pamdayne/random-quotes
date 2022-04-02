@@ -4,39 +4,33 @@ $color-light: #c0c0c0;
 $color-lighter: #dadada;
 $font-fam: 'Courier New', Courier, monospace;
 
-
 @mixin flex($justCont, $alignItems) {
     display: flex;
     justify-content: $justCont;
     align-items: $alignItems;
 }
 
-.body{
+main {
     background-color: $color-dark;
     height: 100vh;
     width: 100%;
-}
+    @include flex(center, center);
 
-main{
-    background-color: $color-dark;
-    height: 100vh;
-    width: 100%;
-
-    .wrapper{
+    .wrapper {
         background-color: $color-darker;
         height: 50%;
         width: 50%;
 
         padding: 2rem;
 
-        @include flex(center, center )
+        @include flex(center, center);
     }
 }
 
-.quote{
+.quote {
     color: $color-light;
     font-family: $font-fam;
-    &__text{
+    &__text {
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
