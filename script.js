@@ -9,7 +9,7 @@ async function fetchQuotes() {
     }
 }
 
-async function renderQuotes(data) {
+async function renderQuotes() {
     const getQuotes = await fetchQuotes()
     const quotes = getQuotes.data
     const num = randomizer(quotes.length)
