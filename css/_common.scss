@@ -1,0 +1,54 @@
+$color-dark: #555;
+$color-darker: #222;
+$color-light: #c0c0c0;
+$color-lighter: #dadada;
+$font-fam: 'Courier New', Courier, monospace;
+
+@mixin flex($justCont, $alignItems) {
+	display: flex;
+	justify-content: $justCont;
+	align-items: $alignItems;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.body {
+	background-color: $color-dark;
+
+	header {
+		@include flex(space-between, baseline);
+	}
+}
+
+main {
+	height: 100vh;
+	width: 100%;
+
+	@include flex(center, center);
+
+	.wrapper {
+		background-color: $color-darker;
+		min-height: 50%;
+		max-width: 500px;
+		width: 50vw;
+		padding: 2rem;
+		border-radius: 1rem;
+
+		@include flex(center, center);
+
+		box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+.quote {
+	color: $color-light;
+	font-family: $font-fam;
+
+	&_text {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+}
