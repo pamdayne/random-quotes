@@ -28,6 +28,9 @@ async function renderSingleQuote() {
 }
 
 async function renderMultiQuotes(author) {
+	document.querySelector('.quote').style.display = 'none'
+	document.querySelector('.quote_s').style.display = 'block'
+
 	let getQuotes = await fetchQuotes()
 	let quotes = getQuotes.data
 	let newQuoteArr = []
