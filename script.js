@@ -19,7 +19,7 @@ async function renderSingleQuotes() {
 	let n = randomizer(quotes.length)
 
 	let html = `<div class="quote_text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
-								<a href="#" class="quote_details" >
+								<a href="#" class="quote_details" onclick="getAuthorQuotes('${quotes[n].quoteAuthor}')">
 										<div class="author">${quotes[n].quoteAuthor}</div>
 										<div class="genre">${quotes[n].quoteGenre}</div>
 								</a>`
