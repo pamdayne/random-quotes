@@ -39,14 +39,13 @@ async function renderMultiQuotes(author) {
 	})
 
 	newQuoteArr.forEach(quote => {
-		console.log(quote)
 		html += `<div class="quote_text" key="${quote._id}">${quote.quoteText}</div> 
 							<div class="quote_details">
 									<div class="author">${quote.quoteAuthor}</div>
 									<div class="genre">${quote.quoteGenre}</div>
 							</a>`
 	})
-	let quoteWrapper = document.querySelector(".quoteses")
+	let quoteWrapper = document.querySelector(".quote_s")
 	quoteWrapper.innerHTML = html
 }
 
