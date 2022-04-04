@@ -27,6 +27,29 @@ async function renderSingleQuotes() {
 	quoteWrapper.innerHTML = html
 }
 
+async function renderMultiQuotes(author) {
+	let getQuotes = await fetchQuotes()
+	let quotes = getQuotes.data
+	let newQuoteArr = []
+	let html = ''
+
+	quotes.forEach(q => {
+		if (q.quoteAuthor == author)
+			newQuoteArr.push(q)
+	})
+
+	newQuoteArr.forEach(quote => {
+		console.log(quote)
+		html += `<div class="quote_text" key="${quote._id}">${quote.quoteText}</div> 
+							<div class="quote_details">
+									<div class="author">${quote.quoteAuthor}</div>
+									<div class="genre">${quote.quoteGenre}</div>
+							</a>`
+	})
+	let quoteWrapper = document.querySelector(".quoteses")
+	quoteWrapper.innerHTML = html
+}
+
 function randomizer(max) {
 	return Math.floor(Math.random() * max);
 }
