@@ -16,7 +16,7 @@ async function fetchQuotes() {
 async function renderSingleQuote() {
 	let getQuotes = await fetchQuotes()
 	let quotes = getQuotes.data
-	let n = randomizer(quotes.length)
+	let n = calcRandom(quotes.length)
 
 	let html = `<div class="quote_text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
 								<a href="#" class="quote_details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
@@ -50,6 +50,6 @@ async function renderMultiQuotes(author) {
 	quoteWrapper.innerHTML = html
 }
 
-function randomizer(max) {
+function calcRandom(max) {
 	return Math.floor(Math.random() * max);
 }
