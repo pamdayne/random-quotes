@@ -53,3 +53,9 @@ async function renderMultiQuotes(author) {
 function calcRandom(max) {
 	return Math.floor(Math.random() * max);
 }
+
+const randomizer = () => setTimeout(function () {
+	document.querySelector('.quote').style.display = 'block'
+	document.querySelector('.quote_s').style.display = 'none'
+	renderSingleQuote()
+}, 200)
