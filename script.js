@@ -4,6 +4,7 @@ window.onload = (event) => {
 	window.setTimeout(() => {
 		quoteEventListener()
 	}, 1000)
+	renderSingleQuotes()
 }
 
 async function fetchQuotes() {
@@ -15,15 +16,16 @@ async function fetchQuotes() {
 	}
 }
 
-async function renderQuotes() {
-	const getQuotes = await fetchQuotes()
-	const quotes = getQuotes.data
-	const num = randomizer(quotes.length)
-	const html = ` <div class="quote_text" key="${quotes[num].id}">${quotes[num].quoteText}</div> 
-										<a href="#" class="quote_details">
-												<div class="author">${quotes[num].quoteAuthor}</div>
-												<div class="genre">${quotes[num].quoteGenre}</div>
-										</a>`
+async function renderSingleQuotes() {
+	let getQuotes = await fetchQuotes()
+	let quotes = getQuotes.data
+	let n = randomizer(quotes.length)
+
+	let html = `<div class="quote_text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
+								<a href="#" class="quote_details" >
+										<div class="author">${quotes[n].quoteAuthor}</div>
+										<div class="genre">${quotes[n].quoteGenre}</div>
+								</a>`
 	let quoteWrapper = document.querySelector(".quote")
 	quoteWrapper.innerHTML = html
 }
