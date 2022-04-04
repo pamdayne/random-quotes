@@ -1,7 +1,7 @@
 const url = 'https://quote-garden.herokuapp.com/api/v3/quotes';
 
 window.onload = (event) => {
-	renderSingleQuotes()
+	renderSingleQuote()
 }
 
 async function fetchQuotes() {
@@ -13,7 +13,7 @@ async function fetchQuotes() {
 	}
 }
 
-async function renderSingleQuotes() {
+async function renderSingleQuote() {
 	let getQuotes = await fetchQuotes()
 	let quotes = getQuotes.data
 	let n = randomizer(quotes.length)
