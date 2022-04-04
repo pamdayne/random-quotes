@@ -1,9 +1,6 @@
 const url = 'https://quote-garden.herokuapp.com/api/v3/quotes';
 
 window.onload = (event) => {
-	window.setTimeout(() => {
-		quoteEventListener()
-	}, 1000)
 	renderSingleQuotes()
 }
 
@@ -33,15 +30,3 @@ async function renderSingleQuotes() {
 function randomizer(max) {
 	return Math.floor(Math.random() * max);
 }
-
-function quoteEventListener() {
-	const quoteDetails = document.querySelector('.quote_details')
-	quoteDetails.addEventListener('click', quotesByAuthor)
-}
-
-function quotesByAuthor() {
-	console.log('clicked')
-}
-
-// Load functions
-renderQuotes()
