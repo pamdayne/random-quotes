@@ -22,6 +22,7 @@ async function renderSingleQuote() {
 								<a href="#" class="quote_details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
 										<div class="author">${quotes[n].quoteAuthor}</div>
 										<div class="genre">${quotes[n].quoteGenre}</div>
+										<span class="material-icons">east</span>
 								</a>`
 	let quoteWrapper = document.querySelector(".quote")
 	quoteWrapper.innerHTML = html
