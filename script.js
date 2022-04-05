@@ -20,9 +20,11 @@ async function renderSingleQuote() {
 
 	let html = `<div class="quote_text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
 								<a href="#" class="quote_details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
+									<div>
 										<div class="author">${quotes[n].quoteAuthor}</div>
 										<div class="genre">${quotes[n].quoteGenre}</div>
-										<span class="material-icons">east</span>
+									</div>
+									<span class="material-icons">east</span>
 								</a>`
 	let quoteWrapper = document.querySelector(".quote")
 	quoteWrapper.innerHTML = html
