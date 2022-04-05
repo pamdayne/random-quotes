@@ -2,7 +2,7 @@ $color-dark: #555;
 $color-darker: #222;
 $color-light: #c0c0c0;
 $color-lighter: #dadada;
-$font-fam: 'Courier New', Courier, monospace;
+$font-fam: Georgia, serif;
 
 @mixin flex($justCont, $alignItems) {
 	display: flex;
@@ -16,10 +16,27 @@ a {
 }
 
 .body {
+	font-family: $font-fam;
 	background-color: $color-dark;
+	color: $color-light;
+	line-height: 1.5;
+	transition: all 0.3s ease;
+
+	&.light {
+		background-color: $color-light;
+		color: $color-dark;
+
+		.wrapper {
+			background-color: $color-lighter;
+		}
+	}
 
 	header {
 		@include flex(space-between, baseline);
+
+		a {
+			@include flex(center, center)
+		}
 	}
 }
 
@@ -33,22 +50,40 @@ main {
 		background-color: $color-darker;
 		min-height: 50%;
 		max-width: 500px;
+		padding: 1rem;
 		width: 50vw;
 		padding: 2rem;
 		border-radius: 1rem;
+		box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
 
 		@include flex(center, center);
 
-		box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
-	}
-}
+		.quote {
+			&_text {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
 
-.quote {
-	color: $color-light;
-	font-family: $font-fam;
+			&_details {
+				@include flex(space-between, center);
 
-	&_text {
-		font-size: 1.5rem;
-		margin-bottom: 2rem;
+				.material-icons {
+					opacity: 0;
+					transition: opacity 0.6s ease;
+				}
+
+				&:hover {
+					.material-icons {
+						opacity: 1;
+					}
+				}
+			}
+
+			&_s {
+				.quote_details {
+					margin-bottom: 1rem;
+				}
+			}
+		}
 	}
 }
