@@ -62,3 +62,7 @@ const randomizer = () => setTimeout(function () {
 	document.querySelector('.quote_s').style.display = 'none'
 	renderSingleQuote()
 }, 200)
+
+function changeColorScheme() {
+	document.querySelector('.body').classList.toggle('light');
+}
