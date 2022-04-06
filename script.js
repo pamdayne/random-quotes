@@ -34,6 +34,10 @@ async function renderMultiQuotes(author) {
 	hideContentAnimation(document.querySelector('.quote'))
 	document.querySelector('.quote').style.display = 'none'
 
+	setTimeout(() => {
+		showContentAnimation(document.querySelector('.quotes'))
+	}, 1000)
+
 	let getQuotes = await fetchQuotes()
 	let quotes = getQuotes.data
 	let newQuoteArr = []
@@ -59,6 +63,33 @@ async function renderMultiQuotes(author) {
 
 function calcRandom(max) {
 	return Math.floor(Math.random() * max);
+}
+
+const randomizer = () => {
+	hideContentAnimation(document.querySelector('.quote'))
+	document.querySelector('.quotes').style.display = 'none'
+
+	setTimeout(() => {
+		showContentAnimation(document.querySelector('.quote'))
+	}, 1000)
+
+	setTimeout(() => {
+		renderSingleQuote()
+	}, 300)
+}
+
+const hideContentAnimation = (quote) => {
+	quote.style.cssText = `
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	`
+}
+
+const showContentAnimation = (quote) => {
+	quote.style.cssText = `
+		opacity: 1;
+		transition: opacity 0.5s ease;
+	`
 }
 
 function changeColorScheme() {
