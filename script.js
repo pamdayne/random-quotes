@@ -18,9 +18,9 @@ async function renderSingleQuote() {
 	let quotes = getQuotes.data
 	let n = calcRandom(quotes.length)
 
-	let html = `<div class="quote_text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
-								<a href="#" class="quote_details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
-									<div>
+	let html = `<div class="text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
+								<a href="#" class="details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
+									<div class="quote-inner">
 										<div class="author">${quotes[n].quoteAuthor}</div>
 										<div class="genre">${quotes[n].quoteGenre}</div>
 									</div>
@@ -31,8 +31,8 @@ async function renderSingleQuote() {
 }
 
 async function renderMultiQuotes(author) {
+	hideContentAnimation(document.querySelector('.quote'))
 	document.querySelector('.quote').style.display = 'none'
-	document.querySelector('.quote_s').style.display = 'block'
 
 	let getQuotes = await fetchQuotes()
 	let quotes = getQuotes.data
@@ -45,27 +45,21 @@ async function renderMultiQuotes(author) {
 	})
 
 	newQuoteArr.forEach(quote => {
-		html += `<div>
-							<div class="quote_text" key="${quote._id}">${quote.quoteText}</div> 
-							<div class="quote_details">
+		html += `<div class="quote-inner">
+							<div class="text" key="${quote._id}">${quote.quoteText}</div> 
+							<div class="details">
 									<div class="author">${quote.quoteAuthor}</div>
 									<div class="genre">${quote.quoteGenre}</div>
 							</a>
 						</div>`
 	})
-	let quoteWrapper = document.querySelector(".quote_s")
+	let quoteWrapper = document.querySelector(".quotes")
 	quoteWrapper.innerHTML = html
 }
 
 function calcRandom(max) {
 	return Math.floor(Math.random() * max);
 }
-
-const randomizer = () => setTimeout(function () {
-	document.querySelector('.quote').style.display = 'block'
-	document.querySelector('.quote_s').style.display = 'none'
-	renderSingleQuote()
-}, 200)
 
 function changeColorScheme() {
 	document.querySelector('.body').classList.toggle('light');
