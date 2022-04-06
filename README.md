@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://rand-quoter.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/pamdayne/random-quotes">
       Solution
     </a>
     <span> | </span>
@@ -24,7 +24,6 @@
 
 <!-- TABLE OF CONTENTS -->
 
-@TODO: To fill README
 
 ## Table of Contents
 
@@ -39,22 +38,31 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://raw.githubusercontent.com/pamdayne/random-quotes/master/featimg_quotes.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+
+Hi there, my name is Pam and I'm a frontend engineer by day. In my progamming life, I enjoy doing CSS for the most part. 
+
+My main focus through this exercise is as a practice for myself to get in touch with plain vanilla Javascript. 
+
+Honestly, I was really afraid to do anything Javascript. But with these kinds, I think I can move past that fear eventually.
+
+Thanks to devchallenges.io for making these kind of exercises are fun to do. This is the first one I've done from them.
+
+You can see the demo [here](https://rand-quoter.netlify.app/).
+
+Though it may not seem a lot, but to myself, I learned about fetch(), setTimout() and forEach() functions. I have still so many things I need to learn and to be better at. 
+
+I look forward to doing more of these challenges.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+Plain ol', plain ol'. No added frameworks.
+- HTML
+- [SCSS](https://sass-lang.com/)
+- [JavaScript](https://www.javascript.com/)
 
 ## Features
 
@@ -62,34 +70,15 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8) was to build an application to complete the given user stories.
 
-
-## How To Use
-
-<!-- For example: -->
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
-
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [Javascript Fetch API](https://www.javascripttutorial.net/javascript-fetch-api/)
+- [SCSS Mixin & Include](https://sass-lang.com/documentation/at-rules/mixin)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [pamdayne.com](https://pamdayne.com/})
+- GitHub [@pamdayne](https://github.com/pamdayne})
+- Twitter [@pamdayne](https://{twitter.com/pamdayne})
