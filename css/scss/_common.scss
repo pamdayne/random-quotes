@@ -2,7 +2,7 @@ $color-dark: #555;
 $color-darker: #222;
 $color-light: #c0c0c0;
 $color-lighter: #dadada;
-$font-fam: Georgia, serif;
+$font-fam: 'Trebuchet MS', serif;
 
 @mixin flex($justCont, $alignItems) {
 	display: flex;
@@ -32,6 +32,7 @@ a {
 	}
 
 	header {
+		padding: 1rem;
 		@include flex(space-between, baseline);
 
 		a {
@@ -41,7 +42,7 @@ a {
 }
 
 main {
-	height: 100vh;
+	height: calc(100vh - 60px);
 	width: 100%;
 
 	@include flex(center, center);
@@ -58,13 +59,35 @@ main {
 
 		@include flex(center, center);
 
-		.quote {
-			&_text {
+		.quotes {
+			.text {
 				font-size: 1.5rem;
-				margin-bottom: 1rem;
+				margin-bottom: 2rem;
 			}
 
-			&_details {
+			.quote-inner {
+				overflow-y: scroll;
+				max-height: 20rem;
+
+				.details {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+
+		.quote {
+			.text {
+				font-size: 1.5rem;
+				margin-bottom: 3rem;
+			}
+
+			.details {
+				.genre {
+					font-size: 70%;
+					letter-spacing: .2rem;
+					text-transform: uppercase;
+				}
+
 				@include flex(space-between, center);
 
 				.material-icons {
@@ -76,12 +99,6 @@ main {
 					.material-icons {
 						opacity: 1;
 					}
-				}
-			}
-
-			&_s {
-				.quote_details {
-					margin-bottom: 1rem;
 				}
 			}
 		}
