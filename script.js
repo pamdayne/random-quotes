@@ -43,6 +43,8 @@ async function renderAuthorQuotes(author) {
 	let newQuoteArr = []
 	let html = ''
 
+	html = `<div class="author">${author}</div>`
+
 	quotes.forEach(q => {
 		if (q.quoteAuthor == author)
 			newQuoteArr.push(q)
@@ -50,7 +52,6 @@ async function renderAuthorQuotes(author) {
 
 	newQuoteArr.forEach(quote => {
 		html += `<div class="quote-inner">
-							<div class="author">${quote.quoteAuthor}</div>
 							<div class="text" key="${quote._id}">${quote.quoteText}</div> 
 						</div>`
 	})
