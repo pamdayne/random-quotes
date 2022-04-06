@@ -19,7 +19,7 @@ async function renderSingleQuote() {
 	let n = calcRandom(quotes.length)
 
 	let html = `<div class="text" key="${quotes[n]._id}">${quotes[n].quoteText}</div> 
-								<a href="#" class="details" onclick="renderMultiQuotes('${quotes[n].quoteAuthor}')">
+								<a href="#" class="details" onclick="renderAuthorQuotes('${quotes[n].quoteAuthor}')">
 									<div class="quote-inner">
 										<div class="author">${quotes[n].quoteAuthor}</div>
 										<div class="genre">${quotes[n].quoteGenre}</div>
@@ -30,7 +30,7 @@ async function renderSingleQuote() {
 	quoteWrapper.innerHTML = html
 }
 
-async function renderMultiQuotes(author) {
+async function renderAuthorQuotes(author) {
 	hideContentAnimation(document.querySelector('.quote'))
 	document.querySelector('.quote').style.display = 'none'
 
@@ -50,11 +50,8 @@ async function renderMultiQuotes(author) {
 
 	newQuoteArr.forEach(quote => {
 		html += `<div class="quote-inner">
+							<div class="author">${quote.quoteAuthor}</div>
 							<div class="text" key="${quote._id}">${quote.quoteText}</div> 
-							<div class="details">
-									<div class="author">${quote.quoteAuthor}</div>
-									<div class="genre">${quote.quoteGenre}</div>
-							</a>
 						</div>`
 	})
 	let quoteWrapper = document.querySelector(".quotes")
