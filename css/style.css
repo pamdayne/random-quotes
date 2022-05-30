@@ -430,7 +430,7 @@ main {
 main .wrapper {
   background-color: #222;
   min-height: 50%;
-  max-width: 50rem;
+  max-width: 30rem;
   width: 50vw;
   padding: 2rem;
   border-radius: 1rem;
