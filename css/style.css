@@ -414,7 +414,7 @@ a {
 }
 
 main {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 6rem);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,8 +430,7 @@ main {
 main .wrapper {
   background-color: #222;
   min-height: 50%;
-  max-width: 500px;
-  padding: 1rem;
+  max-width: 30rem;
   width: 50vw;
   padding: 2rem;
   border-radius: 1rem;
@@ -487,5 +486,25 @@ main .text {
 
 .quote .details:hover .material-icons {
   opacity: 1;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0.6;
+  padding: .6rem;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer a {
+  color: #222;
 }
 /*# sourceMappingURL=style.css.map */
