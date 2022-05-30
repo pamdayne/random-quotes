@@ -5,115 +5,115 @@ $color-lighter: #dadada;
 $font-fam: 'Trebuchet MS', serif;
 
 @mixin flex($justCont, $alignItems) {
-	display: flex;
-	justify-content: $justCont;
-	align-items: $alignItems;
+  display: flex;
+  justify-content: $justCont;
+  align-items: $alignItems;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .body {
-	font-family: $font-fam;
-	background-color: $color-dark;
-	color: $color-light;
-	line-height: 1.5;
-	transition: all 0.3s ease;
+  font-family: $font-fam;
+  background-color: $color-dark;
+  color: $color-light;
+  line-height: 1.5;
+  transition: all 0.3s ease;
 
-	&.light {
-		background-color: $color-light;
-		color: $color-dark;
+  &.light {
+    background-color: $color-light;
+    color: $color-dark;
 
-		.wrapper {
-			background-color: $color-lighter;
-		}
-	}
+    .wrapper {
+      background-color: $color-lighter;
+    }
+  }
 
-	header {
-		padding: 1rem;
-		@include flex(space-between, baseline);
+  header {
+    padding: 1rem;
+    @include flex(space-between, baseline);
 
-		a {
-			@include flex(center, center)
-		}
-	}
+    a {
+      @include flex(center, center)
+    }
+  }
 }
 
 main {
-	height: calc(100vh - 6rem);
-	width: 100%;
+  height: calc(100vh - 6rem);
+  width: 100%;
 
-	@include flex(center, center);
+  @include flex(center, center);
 
-	.wrapper {
-		background-color: $color-darker;
-		min-height: 50%;
-		max-width: 30rem;
-		width: 50vw;
-		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
+  .wrapper {
+    background-color: $color-darker;
+    min-height: 50%;
+    max-width: 30rem;
+    width: 50vw;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
 
-		@include flex(center, center);
-	}
+    @include flex(center, center);
+  }
 
-	.text {
-		font-size: 1.5rem;
-		margin-bottom: 3rem;
-		padding-left: 1.5rem;
-		border-left: 0.1rem solid $color-dark;
-	}
+  .text {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    padding-left: 1.5rem;
+    border-left: 0.1rem solid $color-dark;
+  }
 }
 
 .quotes {
-	.author {
-		text-transform: uppercase;
-		letter-spacing: 1rem;
-		font-size: 120%;
-		margin-bottom: 3rem;
-	}
+  .author {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-size: 120%;
+    margin-bottom: 3rem;
+  }
 
-	.quote-inner {
-		overflow-y: scroll;
-		max-height: 20rem;
+  .quote-inner {
+    overflow-y: scroll;
+    max-height: 20rem;
 
-	}
+  }
 }
 
 .quote {
-	.details {
-		@include flex(space-between, center);
+  .details {
+    @include flex(space-between, center);
 
-		.material-icons {
-			opacity: 0;
-			transition: opacity 0.6s ease;
-		}
+    .material-icons {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
 
-		&:hover {
-			.material-icons {
-				opacity: 1;
-			}
-		}
-	}
+    &:hover {
+      .material-icons {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 footer {
-	text-align: center;
-	position: fixed;
-	bottom: 0;
-	left: 50%;
-	margin-right: -50%;
-	transform: translateX(-50%);
-	opacity: 0.6;
-	padding: .6rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  padding: .6rem;
 
-	&:hover {
-		opacity: 1;
-	}
+  &:hover {
+    opacity: 1;
+  }
 
-	a {
-		color: $color-darker;
-	}
+  a {
+    color: $color-darker;
+  }
 }
