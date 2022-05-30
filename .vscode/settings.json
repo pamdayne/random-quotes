@@ -1,0 +1,26 @@
+{
+    "html.format.indentInnerHtml": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "css/"
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "prettier.jsxSingleQuote": true,
+    "html.completion.attributeDefaultValue": "singlequotes",
+    "prettier.singleQuote": true,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "liveSassCompile.settings.showOutputWindow": true,
+    "liveSassCompile.settings.generateMap": false,
+}
