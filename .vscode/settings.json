@@ -23,4 +23,14 @@
     "typescript.preferences.quoteStyle": "single",
     "liveSassCompile.settings.showOutputWindow": true,
     "liveSassCompile.settings.generateMap": false,
+    "postcssSorting.config": {
+      "order": [
+        "custom-properties",
+        "dollar-variables",
+        "declarations",
+        "at-rules",
+        "rules"
+      ],
+      "properties-order": ["display", "position", "top", "right", "bottom", "left"]
+    }
 }

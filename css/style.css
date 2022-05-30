@@ -121,9 +121,9 @@ small {
  */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -230,12 +230,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  /* 2 */
+  display: table;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   /* 1 */
   color: inherit;
-  /* 2 */
-  display: table;
   /* 1 */
   max-width: 100%;
   /* 1 */
@@ -342,12 +342,12 @@ template {
 }
 
 .material-icons {
+  /* Preferred icon size */
+  display: inline-block;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
@@ -389,10 +389,10 @@ a {
 }
 
 .body header {
-  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 1rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -414,11 +414,11 @@ a {
 }
 
 main {
-  height: calc(100vh - 6rem);
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100vh - 6rem);
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -428,6 +428,9 @@ main {
 }
 
 main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #222;
   min-height: 50%;
   max-width: 30rem;
@@ -436,9 +439,6 @@ main .wrapper {
   border-radius: 1rem;
   -webkit-box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 4rem 2rem -3rem rgba(0, 0, 0, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -489,10 +489,10 @@ main .text {
 }
 
 footer {
-  text-align: center;
   position: fixed;
   bottom: 0;
   left: 50%;
+  text-align: center;
   margin-right: -50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
